@@ -5,8 +5,7 @@ const Categorie = (props) => {
     const {category_name,subcatg}=props.categorie;
 
     const [show,setShow]= useState(false);
-    // const [checkBox,setCheckBox] = useState(false);
-//    console.log('checkbox',checkBox);
+    const [checkBox,setCheckBox] = useState(false);
     return (
         <div className="container" style={{color: '#9DCCFF'}} >
           <div className="row">
@@ -14,12 +13,12 @@ const Categorie = (props) => {
               <h4 onClick={()=>setShow(!show)} >{category_name}</h4>
            
            {
-              show && subcatg.map(subCat=> <SubCatg subCat={subCat}></SubCatg>)
+              show && subcatg.map(subCat=> <SubCatg checkBox={checkBox} subCat={subCat}></SubCatg>)
               
            }
            </div>
            <div className="col-md-4">
-           {/* <input onChange={()=>setCheckBox(!checkBox)} type="checkbox" /> */}
+           <input onClick={()=>setCheckBox(!checkBox)} type="checkbox" />
            </div>
               
           </div>
