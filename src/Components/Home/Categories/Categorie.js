@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import SubCatg from '../SubCatg/SubCatg';
 
 const Categorie = (props) => {
-    const {category_id,category_name,subcatg}=props.categorie;
-    const [show,setShow]= useState(false);
+    const {category_name,subcatg}=props.categorie;
 
+    const [show,setShow]= useState(false);
+    // const [checkBox,setCheckBox] = useState(false);
+//    console.log('checkbox',checkBox);
     return (
         <div className="container" style={{color: '#9DCCFF'}} >
           <div className="row">
@@ -17,7 +19,7 @@ const Categorie = (props) => {
            }
            </div>
            <div className="col-md-4">
-           <input type="checkbox" />
+           {/* <input onChange={()=>setCheckBox(!checkBox)} type="checkbox" /> */}
            </div>
               
           </div>
